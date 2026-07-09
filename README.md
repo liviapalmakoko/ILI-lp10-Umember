@@ -16,6 +16,7 @@ assets/
   └─ favicon.png
 imagens/
   └─ destinos/  → foto da orla de Cannes
+  └─ generated/ → imagens geradas para hero e destinos
 materiais/      → briefing, logos .ai/.psd e referências (ignorados no git)
 ```
 
@@ -40,6 +41,5 @@ acentos em ciano/verde-água e cards translúcidos.
 | Ciano (brilho cristal) | `#7FD8E6` |
 
 ## Pendências (TODO)
-- [ ] **Fotos reais dos destinos** Mônaco, Coreia e Dubai (seção 04) — hoje há placeholders com gradiente da marca em `.destino-photo`.
 - [ ] **Integração do formulário** (seção 05) com backend / CRM / e-mail da Ilikia — hoje o envio é simulado no front-end (ver `TODO` em `script.js`).
 - [ ] Confirmar logo/parceria do **AMWC Cannes** (hoje tratado como texto).
