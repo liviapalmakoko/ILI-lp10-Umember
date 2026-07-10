@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260710-34" />
 </head>
 <body>
 
@@ -21,7 +21,9 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="#hero" class="brand" aria-label="U Members by Ilikia">
-        <img src="assets/brand/members-logo.png" alt="U Members by Ilikia" class="brand-logo" />
+        <img src="assets/brand/members-logo-white.png" alt="U Members by Ilikia" class="brand-logo" />
+        <span class="brand-divider" aria-hidden="true"></span>
+        <img src="assets/brand/ilikia-logo.png" alt="Ilikia" class="ilikia-logo" />
       </a>
       <nav class="nav" aria-label="Navegação principal">
         <a href="#programa">O Programa</a>
@@ -67,7 +69,7 @@
         </div>
       </div>
       <figure class="hero-trophy reveal" aria-hidden="true">
-        <img src="assets/brand/trophy-hero.png" alt="" />
+        <img src="materiais/BRANDING 2026 (1).png" alt="" />
       </figure>
     </div>
     <a href="#programa" class="scroll-cue" aria-label="Rolar para baixo"><span></span></a>
@@ -76,14 +78,20 @@
   <!-- ===================== MARQUEE ===================== -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>U&nbsp;Members</span><span class="dot">✦</span>
-      <span>U&nbsp;Members</span><span class="dot">✦</span>
-      <span>U&nbsp;Members</span><span class="dot">✦</span>
-      <span>U&nbsp;Members</span><span class="dot">✦</span>
-      <span>U&nbsp;Members</span><span class="dot">✦</span>
-      <span>U&nbsp;Members</span><span class="dot">✦</span>
-      <span>U&nbsp;Members</span><span class="dot">✦</span>
-      <span>U&nbsp;Members</span><span class="dot">✦</span>
+      <div class="marquee-group">
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+      </div>
+      <div class="marquee-group">
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+        <span>U&nbsp;Members</span><span class="dot">✦</span>
+      </div>
     </div>
   </div>
 
@@ -185,6 +193,22 @@
     </div>
   </section>
 
+  <!-- ===================== COMUNIDADE U MEMBERS ===================== -->
+  <section class="community" aria-label="Comunidade U Members">
+    <div class="container">
+      <div class="community-panel reveal">
+        <div class="community-copy">
+          <span class="kicker light">Experiências compartilhadas</span>
+          <h2>Uma comunidade que <span class="accent">vive junto.</span></h2>
+          <p>Conexões, encontros e experiências internacionais ao lado de profissionais que compartilham o mesmo padrão de excelência.</p>
+        </div>
+        <div class="community-images" aria-hidden="true">
+          <img src="imagens/generated/cannes-members-arrival-v1.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== DESTINOS JÁ VISITADOS (SEÇÃO 04) ===================== -->
   <section class="section destinos" id="destinos">
     <div class="container">
@@ -214,19 +238,23 @@
   <!-- ===================== PRÓXIMO DESTINO: CANNES 2027 ===================== -->
   <section class="section cannes" id="cannes">
     <div class="container">
-      <div class="cannes-head reveal">
-        <span class="kicker light">Qual o nosso próximo destino?</span>
-        <p class="cannes-switch"><span class="script">Cannes</span></p>
-        <div class="cannes-meta">
-          <span class="vagas">Somente 30 vagas</span>
-          <span class="dates">30/03 à 04/04 · 2027</span>
+      <div class="cannes-reference-card reveal">
+        <figure class="cannes-photo">
+          <img src="imagens/generated/cannes-hero-v2.png" alt="La Croisette e a orla de Cannes, França" />
+        </figure>
+        <div class="cannes-head">
+          <span class="next-destination">Próximo destino:</span>
+          <p class="cannes-switch">
+            <span class="previous-destination">Mônaco</span>
+            <span class="script">Cannes</span>
+          </p>
+          <div class="cannes-meta">
+            <span class="vagas">Somente <strong>30 vagas</strong></span>
+            <span class="dates">30/03 à 04/04 · 2027</span>
+          </div>
         </div>
+        <span class="cannes-watermark script" aria-hidden="true">Cannes</span>
       </div>
-
-      <figure class="cannes-photo reveal">
-        <img src="imagens/generated/cannes-hero-v2.png" alt="La Croisette e a orla de Cannes, França" />
-        <figcaption><span class="script">Cannes</span></figcaption>
-      </figure>
 
       <div class="cannes-body">
         <div class="cannes-text reveal">
@@ -263,7 +291,19 @@
       </div>
 
       <div class="package reveal">
-        <div class="package-head"><span class="kicker light">Pacote</span><h3>Cannes 2027</h3></div>
+        <div class="package-head">
+          <span class="kicker light">Pacote</span>
+          <h3>Cannes 2027</h3>
+          <p class="package-callout">Uma experiência internacional completa, criada para apenas <strong>30 profissionais.</strong></p>
+        </div>
+        <div class="package-route" aria-label="Rota e período da experiência">
+          <div class="route-stop"><span>Origem</span><strong>Brasil</strong></div>
+          <div class="route-flight" aria-hidden="true"><span>✈</span></div>
+          <div class="route-stop"><span>Conexão</span><strong>Nice</strong></div>
+          <div class="route-flight" aria-hidden="true"><span>✦</span></div>
+          <div class="route-stop"><span>Destino</span><strong>Cannes</strong></div>
+          <div class="route-date"><span>Período</span><strong>30 MAR — 04 ABR</strong></div>
+        </div>
         <div class="package-prices">
           <div class="price-card">
             <span class="price-label">Com aéreo</span>
@@ -356,7 +396,9 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="assets/brand/members-logo.png" alt="U Members by Ilikia" class="footer-logo" />
+        <img src="assets/brand/members-logo-white.png" alt="U Members by Ilikia" class="footer-logo" />
+        <span class="footer-brand-divider" aria-hidden="true"></span>
+        <img src="assets/brand/ilikia-logo.png" alt="Ilikia" class="footer-ilikia-logo" />
         <p>Um programa Ilikia · presente no AMWC Cannes 2027.</p>
       </div>
       <div class="footer-links">
