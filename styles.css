@@ -828,54 +828,6 @@ body::before {
 }
 
 /* =========================================================
-   CANNES ETÉREA — rodada 07
-   ========================================================= */
-.cannes-showcase {
-  position:relative;
-  min-height:clamp(390px,45vw,520px);
-  margin-bottom:46px;
-  overflow:hidden;
-  border-radius:var(--radius);
-  background:#e8e3e2;
-  isolation:isolate;
-}
-.cannes-showcase::after {
-  content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
-  background:linear-gradient(180deg,rgba(232,227,226,.8) 0%,rgba(232,227,226,.16) 52%,transparent 80%);
-}
-.cannes-showcase .cannes-head {
-  position:relative; z-index:3;
-  margin:0; padding:clamp(34px,5vw,58px) 28px 0;
-  color:var(--deep-3);
-}
-.cannes-showcase .kicker { color:var(--teal-2); }
-.cannes-showcase .cannes-switch { color:rgba(15,45,50,.42); }
-.cannes-showcase .cannes-switch .script { color:#18bfca; text-shadow:0 4px 22px rgba(24,191,202,.16); }
-.cannes-showcase .cannes-meta .vagas {
-  color:var(--deep); border-color:rgba(15,45,50,.42); background:rgba(255,255,255,.18);
-}
-.cannes-showcase .cannes-meta .dates { color:var(--deep); font-weight:400; }
-.cannes-showcase .cannes-photo {
-  position:absolute; inset:0; z-index:0;
-  margin:0; border:0; border-radius:0;
-}
-.cannes-showcase .cannes-photo img {
-  width:100%; height:100%; object-fit:cover; object-position:center bottom;
-  filter:saturate(.92) contrast(.96);
-}
-.cannes-showcase .cannes-photo::after {
-  background:linear-gradient(180deg,rgba(232,227,226,.52) 0%,transparent 60%);
-}
-
-@media (max-width:600px) {
-  .cannes-showcase { min-height:390px; margin-bottom:34px; }
-  .cannes-showcase .cannes-head { padding:30px 18px 0; }
-  .cannes-showcase .cannes-switch { font-size:2.4rem; }
-  .cannes-showcase .cannes-meta { gap:10px; }
-  .cannes-showcase .cannes-meta .dates { font-size:.92rem; }
-}
-
-/* =========================================================
    HERO DE MARCA + COMUNIDADE — rodada 08
    ========================================================= */
 .hero {
@@ -957,65 +909,6 @@ body::before {
   .community-panel { min-height:0; }
   .community-images { grid-template-columns:1fr; height:240px; }
   .community-images img:last-child { display:none; }
-}
-
-/* =========================================================
-   CANNES HORIZONTAL — rodada 09
-   ========================================================= */
-.cannes-showcase {
-  display:grid;
-  grid-template-columns:minmax(300px,.78fr) minmax(0,1.22fr);
-  min-height:330px;
-  margin-bottom:40px;
-  background:linear-gradient(135deg,#0d3b42,#08272c 72%);
-  box-shadow:0 28px 70px -48px rgba(0,0,0,.9);
-}
-.cannes-showcase::after { display:none; }
-.cannes-showcase .cannes-head {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
-  padding:38px 32px 38px 42px;
-  text-align:left;
-}
-.cannes-showcase .kicker { color:var(--cyan); }
-.cannes-showcase .cannes-switch {
-  color:rgba(255,255,255,.34);
-  font-size:clamp(2.25rem,4.4vw,3.8rem);
-}
-.cannes-showcase .cannes-switch .script { color:var(--cyan); }
-.cannes-showcase .cannes-meta { justify-content:flex-start; margin-top:14px; }
-.cannes-showcase .cannes-meta .vagas {
-  color:#fff;
-  border-color:rgba(127,216,230,.45);
-  background:rgba(127,216,230,.07);
-}
-.cannes-showcase .cannes-meta .dates { color:var(--cyan-soft); font-weight:300; }
-.cannes-showcase .cannes-photo {
-  position:relative;
-  inset:auto;
-  min-height:330px;
-  overflow:hidden;
-  border-radius:0 var(--radius) var(--radius) 0;
-}
-.cannes-showcase .cannes-photo img {
-  height:100%;
-  min-height:330px;
-  object-position:center;
-  filter:saturate(.9) contrast(1.02);
-}
-.cannes-showcase .cannes-photo::after {
-  background:linear-gradient(90deg,#0b3339 0%,rgba(11,51,57,.28) 18%,transparent 42%),linear-gradient(180deg,transparent 66%,rgba(6,21,24,.34));
-}
-
-@media (max-width:760px) {
-  .cannes-showcase { grid-template-columns:1fr; }
-  .cannes-showcase .cannes-head { align-items:center; padding:30px 22px; text-align:center; }
-  .cannes-showcase .cannes-meta { justify-content:center; }
-  .cannes-showcase .cannes-photo { min-height:230px; border-radius:0 0 var(--radius) var(--radius); }
-  .cannes-showcase .cannes-photo img { min-height:230px; height:230px; }
-  .cannes-showcase .cannes-photo::after { background:linear-gradient(180deg,#0b3339 0%,transparent 30%); }
 }
 
 /* =========================================================
@@ -1217,98 +1110,6 @@ body::before {
 }
 
 /* =========================================================
-   CANNES — LEGIBILIDADE SOBRE A FOTO GERADA
-   ========================================================= */
-.cannes-reference-card::after {
-  display:block;
-  opacity:1;
-  background:
-    radial-gradient(ellipse 68% 58% at 70% 18%,rgba(238,232,232,.96) 0%,rgba(238,232,232,.86) 42%,rgba(238,232,232,.38) 72%,transparent 100%),
-    linear-gradient(180deg,rgba(238,232,232,.58) 0%,rgba(238,232,232,.36) 48%,rgba(238,232,232,.1) 76%,rgba(8,38,43,.05) 100%);
-}
-.cannes-reference-card .cannes-photo img {
-  filter:saturate(.76) brightness(1.04) contrast(.9);
-  object-position:center 52%;
-}
-.cannes-reference-card .cannes-head {
-  width:min(700px,72%);
-  margin-right:5vw;
-  padding-top:clamp(34px,4.2vw,54px);
-  text-shadow:0 2px 18px rgba(255,255,255,.42);
-}
-.next-destination { color:#0b3c42; }
-.previous-destination { color:rgba(80,58,62,.24); }
-.previous-destination::after { background:rgba(85,52,57,.58); }
-.cannes-reference-card .cannes-switch .script {
-  color:#00aabd;
-  text-shadow:0 5px 20px rgba(255,255,255,.5);
-}
-.cannes-reference-card .cannes-meta .vagas {
-  background:rgba(238,232,232,.38);
-  backdrop-filter:blur(5px);
-}
-.cannes-reference-card .cannes-meta .dates {
-  color:#0b353a;
-  text-shadow:0 2px 15px rgba(255,255,255,.65);
-}
-.cannes-watermark {
-  left:-1vw;
-  bottom:-.04em;
-  width:104%;
-  color:rgba(195,241,245,.38);
-  font-size:clamp(8rem,17vw,15rem);
-  line-height:.72;
-  text-align:left;
-  transform:rotate(-2deg);
-}
-
-@media (max-width:760px) {
-  .cannes-reference-card::after {
-    background:linear-gradient(180deg,rgba(238,232,232,.94) 0%,rgba(238,232,232,.68) 46%,rgba(238,232,232,.2) 76%,transparent 100%);
-  }
-  .cannes-reference-card .cannes-head { width:100%; margin:0; }
-  .cannes-watermark { left:-7vw; bottom:.02em; width:110%; font-size:8.2rem; }
-}
-
-/* Cannes: preservar a foto e iluminar somente a área do texto */
-.cannes-reference-card::after {
-  background:radial-gradient(ellipse 48% 46% at 73% 19%,rgba(240,234,234,.88) 0%,rgba(240,234,234,.7) 38%,rgba(240,234,234,.32) 67%,transparent 100%);
-}
-.cannes-reference-card .cannes-photo img {
-  filter:saturate(.94) brightness(1.01) contrast(.98);
-}
-.cannes-reference-card .cannes-head {
-  text-shadow:0 2px 18px rgba(255,255,255,.72);
-}
-.cannes-reference-card .cannes-meta .vagas {
-  background:rgba(239,234,232,.42);
-}
-.cannes-watermark {
-  color:rgba(195,241,245,.32);
-}
-@media (max-width:760px) {
-  .cannes-reference-card::after {
-    background:linear-gradient(180deg,rgba(240,234,234,.82) 0%,rgba(240,234,234,.42) 42%,transparent 72%);
-  }
-}
-
-/* Cannes: conteúdo na área livre à esquerda */
-.cannes-reference-card::after {
-  background:radial-gradient(ellipse 50% 48% at 29% 19%,rgba(240,234,234,.9) 0%,rgba(240,234,234,.72) 39%,rgba(240,234,234,.3) 68%,transparent 100%);
-}
-.cannes-reference-card .cannes-head {
-  width:min(700px,72%);
-  margin-left:5vw;
-  margin-right:auto;
-}
-@media (max-width:760px) {
-  .cannes-reference-card::after {
-    background:linear-gradient(180deg,rgba(240,234,234,.82) 0%,rgba(240,234,234,.42) 42%,transparent 72%);
-  }
-  .cannes-reference-card .cannes-head { width:100%; margin:0; }
-}
-
-/* =========================================================
    PACOTE CANNES — BOARDING PASS PREMIUM
    ========================================================= */
 .package {
@@ -1473,109 +1274,6 @@ body::before {
 }
 
 /* =========================================================
-   O PROGRAMA — CONCEITO "MAIS"
-   ========================================================= */
-.programa .section-head { margin-bottom:42px; }
-.pillars {
-  display:grid;
-  grid-template-columns:1fr;
-  gap:0;
-  max-width:1080px;
-  margin:0 auto;
-  padding:0;
-}
-.pillars::before { display:none; }
-.pillar,
-.pillar:nth-child(2),
-.pillar:last-child {
-  top:0;
-  display:grid;
-  grid-template-columns:64px minmax(330px,.9fr) minmax(280px,1fr);
-  align-items:center;
-  gap:clamp(22px,4vw,54px);
-  min-height:0;
-  padding:20px 12px;
-  border:0;
-  border-bottom:1px solid rgba(127,216,230,.16);
-  border-radius:0;
-  background:transparent;
-  text-align:left;
-}
-.pillar:first-child { border-top:1px solid rgba(127,216,230,.16); }
-.pillar:nth-child(2) { margin-left:5%; margin-right:-5%; }
-.pillar:hover,
-.pillar:nth-child(2):hover {
-  transform:translateX(8px);
-  background:linear-gradient(90deg,rgba(127,216,230,.045),transparent 78%);
-}
-.pillar-num {
-  display:block;
-  width:auto; height:auto;
-  margin:0;
-  border:0;
-  border-radius:0;
-  background:transparent;
-  box-shadow:none;
-  color:var(--cyan);
-  font-size:.72rem;
-  font-weight:600;
-  letter-spacing:.16em;
-}
-.pillar-num::after { display:none; }
-.pillar h3 {
-  position:relative;
-  display:flex;
-  align-items:center;
-  min-height:88px;
-  margin:0;
-  line-height:1;
-}
-.more-word {
-  color:rgba(127,216,230,.09);
-  font-size:clamp(4rem,7.5vw,6.3rem);
-  font-weight:800;
-  letter-spacing:-.08em;
-  text-transform:uppercase;
-  -webkit-text-stroke:1px rgba(127,216,230,.28);
-  transition:color .35s var(--ease),transform .35s var(--ease);
-}
-.pillar-label {
-  position:absolute;
-  left:clamp(72px,8vw,112px);
-  color:#fff;
-  font-size:clamp(1.2rem,2.2vw,1.75rem);
-  font-weight:500;
-  letter-spacing:-.025em;
-}
-.pillar:hover .more-word {
-  color:rgba(127,216,230,.15);
-  transform:scale(1.025);
-}
-.pillar p {
-  max-width:430px;
-  margin:0;
-  color:rgba(255,255,255,.62);
-  font-size:.87rem;
-  line-height:1.68;
-}
-
-@media (max-width:760px) {
-  .pillar,
-  .pillar:nth-child(2),
-  .pillar:last-child {
-    grid-template-columns:36px 1fr;
-    gap:10px 14px;
-    margin:0;
-    padding:22px 4px;
-  }
-  .pillar-num { grid-row:1; }
-  .pillar h3 { grid-column:2; min-height:70px; }
-  .pillar p { grid-column:2; }
-  .more-word { font-size:3.8rem; }
-  .pillar-label { left:66px; font-size:1.2rem; }
-}
-
-/* =========================================================
    CANNES — MENOS BOXES
    ========================================================= */
 .cannes-facts {
@@ -1691,78 +1389,6 @@ body::before {
   .pillar,
   .pillar:nth-child(2),
   .pillar:last-child { min-height:0; padding:28px 24px; }
-}
-
-/* =========================================================
-   CANNES — FOTO GERADA + GRAFISMO DA REFERÊNCIA
-   ========================================================= */
-.cannes-reference-card::after {
-  display:block;
-  background:
-    linear-gradient(180deg,rgba(232,224,224,.72) 0%,rgba(232,224,224,.52) 48%,rgba(232,224,224,.24) 74%,rgba(15,45,50,.06) 100%);
-}
-.cannes-reference-card .cannes-photo img {
-  filter:saturate(.68) brightness(1.12) contrast(.84);
-  object-position:center 56%;
-}
-.cannes-reference-card .cannes-head {
-  width:min(760px,76%);
-  padding-top:clamp(30px,4vw,48px);
-}
-.cannes-watermark {
-  left:-2vw;
-  bottom:-.12em;
-  width:auto;
-  color:rgba(187,239,244,.58);
-  font-size:clamp(9rem,22vw,20rem);
-  line-height:.68;
-  text-align:left;
-  transform:rotate(-2.5deg);
-  text-shadow:0 8px 34px rgba(15,45,50,.1);
-}
-
-@media (max-width:760px) {
-  .cannes-reference-card .cannes-head { width:100%; }
-  .cannes-watermark {
-    left:-8vw;
-    bottom:-.08em;
-    width:auto;
-    font-size:10rem;
-    color:rgba(187,239,244,.5);
-  }
-}
-
-/* =========================================================
-   CANNES — MEIO-TERMO FINAL
-   ========================================================= */
-.cannes { padding-top:82px; }
-.cannes-head { margin-bottom:32px; }
-.cannes-switch {
-  font-size:clamp(1.9rem,4vw,2.65rem);
-  letter-spacing:.08em;
-}
-.cannes-switch .script { font-size:1.48em; }
-.cannes-meta { margin-top:18px; }
-.cannes-meta .dates { font-size:1.15rem; }
-.cannes-photo {
-  width:calc(100% + clamp(32px,7vw,104px));
-  margin-left:calc(clamp(16px,3.5vw,52px) * -1);
-  margin-bottom:42px;
-}
-.cannes-photo img { height:clamp(310px,36vw,430px); }
-.cannes-photo figcaption { display:none; }
-
-@media (max-width:600px) {
-  .cannes { padding-top:62px; }
-  .cannes-head { margin-bottom:26px; }
-  .cannes-switch { font-size:2rem; }
-  .cannes-meta { margin-top:14px; }
-  .cannes-photo {
-    width:calc(100% + 24px);
-    margin-left:-12px;
-    margin-bottom:32px;
-  }
-  .cannes-photo img { height:270px; }
 }
 
 /* =========================================================
@@ -1905,83 +1531,59 @@ body::before {
   position:relative;
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:clamp(30px,5vw,70px);
-  padding:16px 22px 10px;
-  overflow:visible;
+  gap:clamp(34px,6vw,76px);
+  padding:0;
+  border:0;
 }
-.pillars::before {
-  content:''; position:absolute;
-  left:15%; right:15%; top:70px;
-  height:1px;
-  background:linear-gradient(90deg,transparent,var(--cyan) 18%,rgba(127,216,230,.5) 50%,var(--cyan) 82%,transparent);
-  box-shadow:0 0 18px rgba(127,216,230,.28);
-}
+.pillars::before { display:none; }
 .pillar,
 .pillar:last-child {
-  position:relative;
+  position:static;
+  top:0;
   min-height:0;
-  padding:0 12px 18px;
-  overflow:visible;
+  padding:0;
   border:0;
   border-radius:0;
   background:transparent;
   box-shadow:none;
-  text-align:center;
+  text-align:left;
 }
-.pillar:nth-child(2) { top:-24px; }
+.pillar:first-child,
+.pillar:last-child { padding:0; border:0; }
+.pillar:nth-child(2) { top:0; }
 .pillar::before { display:none; }
 .pillar:hover,
 .pillar:nth-child(2):hover {
-  transform:translateY(-7px);
+  transform:none;
   border:0;
   background:transparent;
 }
-.pillar-num {
-  position:relative; z-index:2;
-  display:grid;
-  place-items:center;
-  width:108px; height:108px;
-  margin:0 auto 30px;
-  border:1px solid rgba(127,216,230,.5);
-  border-radius:50%;
-  background:
-    radial-gradient(circle at 34% 26%,rgba(221,251,255,.18),transparent 24%),
-    radial-gradient(circle,rgba(46,148,159,.34),rgba(8,38,43,.94) 68%);
+.pillar-num,
+.pillar-num::after { display:none; }
+.pillar h3 {
+  margin:0 0 12px;
   color:var(--cyan-soft);
-  font-size:1.5rem;
-  font-weight:400;
-  box-shadow:0 0 0 10px rgba(127,216,230,.035),0 18px 44px -24px rgba(127,216,230,.8),inset 0 0 28px rgba(127,216,230,.08);
+  font-size:1.12rem;
+  font-weight:500;
+  line-height:1.35;
 }
-.pillar-num::after {
-  content:''; position:absolute;
-  width:7px; height:7px; top:-4px; right:20px;
-  border-radius:50%; background:var(--crystal);
-  box-shadow:0 0 14px var(--cyan);
-}
-.pillar h3 { margin:0 0 12px; font-size:1.15rem; }
-.pillar p { max-width:310px; margin:0 auto; font-size:.9rem; line-height:1.72; }
+.pillar h3::before { display:none; }
+.pillar p { max-width:320px; margin:0; color:rgba(255,255,255,.6); font-size:.9rem; line-height:1.75; }
 
 @media (max-width:700px) {
   .marquee-group { min-width:165vw; gap:24px; padding:0 16px; }
-  .pillars { grid-template-columns:1fr; gap:28px; padding:12px 0; }
-  .pillars::before {
-    left:53px; right:auto; top:50px; bottom:50px;
-    width:1px; height:auto;
-    background:linear-gradient(180deg,transparent,var(--cyan) 15%,rgba(127,216,230,.5) 50%,var(--cyan) 85%,transparent);
-  }
+  .pillars { grid-template-columns:1fr; gap:30px; padding:0; }
+  .pillars::before { display:none; }
   .pillar,
   .pillar:nth-child(2) {
     top:0;
-    display:grid;
-    grid-template-columns:106px 1fr;
-    column-gap:24px;
-    align-items:center;
+    display:block;
+    min-height:0;
     padding:0;
+    border:0;
     text-align:left;
   }
-  .pillar-num { grid-row:1/3; width:88px; height:88px; margin:0; }
-  .pillar h3 { align-self:end; }
-  .pillar p { align-self:start; max-width:none; margin:0; }
+  .pillar p { max-width:none; }
 }
 
 /* =========================================================
@@ -2123,7 +1725,7 @@ body::before {
   }
 }
 
-/* Cannes: overrides finais de legibilidade (manter no fim do arquivo) */
+/* Cannes — composição e legibilidade finais */
 .cannes-reference-card::after {
   display:block;
   opacity:1;
@@ -2203,4 +1805,1219 @@ body::before {
     background:linear-gradient(180deg,rgba(240,234,234,.82) 0%,rgba(240,234,234,.42) 42%,transparent 72%);
   }
   .cannes-reference-card .cannes-head { width:100%; margin:0; }
+}
+
+/* =========================================================
+   PACOTE CANNES — ticket + modalidades
+   ========================================================= */
+.package {
+  position:relative;
+  overflow:visible;
+  margin-top:52px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.package::before,
+.package::after { display:none; }
+
+.package-ticket {
+  --ticket-notch:28px;
+  position:relative;
+  overflow:hidden;
+  width:calc(100% - 42px);
+  margin:6px auto 18px;
+  padding:clamp(34px,5vw,58px);
+  border:1px solid rgba(15,77,84,.2);
+  border-radius:var(--radius);
+  background:
+    radial-gradient(circle at 88% 8%,rgba(255,255,255,.72),transparent 28%),
+    linear-gradient(135deg,#d7f0f2 0%,#b9e3e7 52%,#91d4db 100%);
+  color:var(--deep);
+  box-shadow:
+    -18px 30px 54px -38px rgba(0,0,0,.92),
+    22px 48px 90px -52px rgba(127,216,230,.82),
+    inset 0 1px 0 rgba(255,255,255,.76);
+  transform:translateX(14px) rotate(-1.15deg);
+  transform-origin:center;
+  -webkit-mask-image:
+    radial-gradient(circle at left 50%,transparent 0 calc(var(--ticket-notch) - 1px),#000 var(--ticket-notch)),
+    radial-gradient(circle at right 50%,transparent 0 calc(var(--ticket-notch) - 1px),#000 var(--ticket-notch));
+  -webkit-mask-composite:source-in;
+  mask-image:
+    radial-gradient(circle at left 50%,transparent 0 calc(var(--ticket-notch) - 1px),#000 var(--ticket-notch)),
+    radial-gradient(circle at right 50%,transparent 0 calc(var(--ticket-notch) - 1px),#000 var(--ticket-notch));
+  mask-composite:intersect;
+}
+.package-ticket::before,
+.package-ticket::after {
+  display:none;
+}
+.package-ticket .package-head { margin-bottom:28px; }
+.package-ticket .package-head .kicker { color:#19747d; }
+.package-ticket .package-head h3 { color:var(--deep); }
+.package-ticket .package-callout { color:rgba(11,53,58,.72); }
+.package-ticket .package-callout strong { color:var(--deep); }
+.package-ticket .package-route { margin-bottom:0; }
+
+.package-offers {
+  margin-top:48px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+.offers-head { max-width:620px; margin:0 auto 40px; text-align:center; }
+.offers-head .kicker { margin-bottom:10px; }
+.offers-head h4 { color:#fff; font-size:clamp(1.6rem,3vw,2.25rem); font-weight:300; line-height:1.15; }
+
+.package-offers .package-prices {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  max-width:900px;
+  margin:0 auto;
+}
+.package-offers .price-card,
+.package-offers .price-card:first-child {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:330px;
+  padding:38px 34px 32px;
+  text-align:left;
+  border:1px solid rgba(221,251,255,.14);
+  border-radius:18px;
+  background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+}
+.package-offers .price-card.featured {
+  border-color:rgba(127,216,230,.72);
+  background:linear-gradient(155deg,rgba(127,216,230,.12),rgba(255,255,255,.025));
+  box-shadow:0 26px 60px -42px rgba(127,216,230,.9),inset 0 1px 0 rgba(255,255,255,.06);
+}
+.price-badge {
+  position:absolute;
+  top:0; left:50%;
+  padding:8px 22px;
+  border-radius:100px;
+  background:var(--cyan);
+  color:var(--deep-3);
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  transform:translate(-50%,-50%);
+}
+.package-offers .price-label {
+  color:var(--cyan-soft);
+  font-size:.74rem;
+  font-weight:600;
+  letter-spacing:.18em;
+}
+.package-offers .price {
+  margin:16px 0 20px;
+  color:#fff;
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:500;
+  line-height:1;
+  white-space:nowrap;
+}
+.package-offers .price small { color:rgba(255,255,255,.5); font-size:.44em; }
+.package-offers .price-card p {
+  max-width:330px;
+  margin-bottom:28px;
+  color:rgba(255,255,255,.62);
+  font-size:.9rem;
+  line-height:1.65;
+}
+.package-offers .price-card .btn { margin-top:auto; }
+.package-offers .featured .btn-cyan,
+.package-offers .featured .btn-cyan:hover {
+  background:var(--cyan);
+  color:var(--deep-3);
+}
+
+.package-conditions {
+  max-width:900px;
+  margin:42px auto 0;
+  padding-top:30px;
+  border-top:1px solid rgba(127,216,230,.15);
+}
+.package-conditions h5 {
+  margin-bottom:14px;
+  color:rgba(255,255,255,.82);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.package-offers .package-notes {
+  max-width:none;
+  margin:0;
+  padding:0;
+  border:0;
+  columns:2;
+  column-gap:44px;
+}
+.package-offers .package-notes li { color:rgba(255,255,255,.58); }
+.package-offers .package-notes li::before { color:var(--cyan); }
+
+@media (max-width:760px) {
+  .package-ticket {
+    --ticket-notch:20px;
+    width:100%;
+    margin:0;
+    padding:34px 24px;
+    transform:none;
+  }
+  .package-offers { margin-top:40px; padding:0; }
+  .package-offers .package-prices { grid-template-columns:1fr; gap:24px; }
+  .package-offers .price-card,
+  .package-offers .price-card:first-child { min-height:0; padding:34px 26px 26px; }
+  .package-offers .package-notes { columns:1; }
+}
+
+/* Destinos — composição compacta no mobile */
+@media (max-width:600px) {
+  .destinos .section-head { margin-bottom:30px; }
+  .destino-grid {
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .destino-card {
+    display:grid;
+    grid-template-columns:minmax(124px,42%) 1fr;
+    min-height:146px;
+    border-radius:16px;
+  }
+  .destino-photo {
+    width:100%;
+    height:146px;
+    aspect-ratio:auto;
+  }
+  .destino-photo img { object-position:center 52%; }
+  .destino-photo::after {
+    background:linear-gradient(90deg,transparent 55%,rgba(6,21,24,.3));
+  }
+  .destino-info {
+    justify-content:center;
+    padding:20px 18px;
+  }
+  .destino-info h3 { font-size:1.25rem; }
+  .destino-info span { font-size:.62rem; line-height:1.5; }
+}
+
+/* =========================================================
+   O PROGRAMA — narrativa lateral + benefícios empilhados
+   ========================================================= */
+.programa-layout {
+  display:grid;
+  grid-template-columns:minmax(300px,.82fr) minmax(520px,1.18fr);
+  gap:clamp(52px,8vw,108px);
+  align-items:start;
+}
+.programa .section-head,
+.programa .section-head.center {
+  width:auto;
+  max-width:none;
+  margin:0;
+  text-align:left;
+}
+.programa .section-head .display-sub,
+.programa .section-head .section-intro {
+  margin-left:0;
+  margin-right:0;
+}
+.programa .display-sub {
+  max-width:470px;
+  font-size:clamp(2.8rem,4.8vw,4.9rem);
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+.programa .section-intro {
+  max-width:460px;
+  margin-top:28px;
+  color:rgba(255,255,255,.62);
+  line-height:1.78;
+}
+.programa .pillars {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+  padding:0;
+  border:0;
+}
+.programa .pillar,
+.programa .pillar:nth-child(2),
+.programa .pillar:last-child {
+  position:relative;
+  display:grid;
+  grid-template-columns:70px minmax(0,1fr);
+  gap:8px 24px;
+  min-height:0;
+  padding:28px 32px;
+  overflow:visible;
+  border:1px solid rgba(127,216,230,.16);
+  border-radius:22px;
+  background:
+    radial-gradient(70% 120% at 100% 0%,rgba(127,216,230,.09),transparent 62%),
+    rgba(255,255,255,.025);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+  text-align:left;
+}
+.programa .pillar::before { display:none; }
+.programa .pillar:hover,
+.programa .pillar:nth-child(2):hover {
+  transform:translateX(4px);
+  border-color:rgba(127,216,230,.34);
+  background:
+    radial-gradient(70% 120% at 100% 0%,rgba(127,216,230,.13),transparent 62%),
+    rgba(255,255,255,.035);
+}
+.programa .pillar-num {
+  display:block;
+  grid-row:1/3;
+  width:auto; height:auto;
+  margin:0;
+  color:var(--cyan);
+  -webkit-text-stroke:0;
+  font-size:1.75rem;
+  font-weight:300;
+  line-height:1.15;
+  letter-spacing:-.05em;
+}
+.programa .pillar-num::after { display:none; }
+.programa .pillar h3 {
+  grid-column:2;
+  margin:0;
+  color:#fff;
+  font-size:1.15rem;
+  line-height:1.35;
+}
+.programa .pillar h3::before { display:none; }
+.programa .pillar p {
+  grid-column:2;
+  max-width:none;
+  margin:0;
+  color:rgba(255,255,255,.6);
+  font-size:.88rem;
+  line-height:1.7;
+}
+
+@media (max-width:900px) {
+  .programa-layout { grid-template-columns:1fr; gap:40px; }
+  .programa .section-head,
+  .programa .section-head.center { max-width:680px; }
+  .programa .display-sub { max-width:620px; font-size:clamp(2.5rem,8vw,4.4rem); }
+  .programa .section-intro { max-width:620px; }
+}
+@media (max-width:600px) {
+  .programa-layout { gap:32px; }
+  .programa .display-sub { font-size:2.45rem; }
+  .programa .section-intro { margin-top:20px; }
+  .programa .pillars { gap:12px; }
+  .programa .pillar,
+  .programa .pillar:nth-child(2),
+  .programa .pillar:last-child {
+    grid-template-columns:42px minmax(0,1fr);
+    gap:6px 14px;
+    padding:22px 20px;
+    border-radius:16px;
+  }
+  .programa .pillar-num { font-size:1.3rem; }
+}
+
+/* =========================================================
+   MOBILE — revisão final da landing page
+   ========================================================= */
+@media (max-width:600px) {
+  html { scroll-padding-top:68px; }
+  .container { padding-inline:18px; }
+  .section { padding:54px 0; }
+  .section-head,
+  .section-head.center { margin-bottom:32px; }
+  .kicker,
+  .eyebrow { font-size:.66rem; letter-spacing:.2em; }
+  .display,
+  .display-sub { font-size:2rem; line-height:1.05; }
+  .section-intro { font-size:.9rem; line-height:1.65; }
+  .cta-row { margin-top:30px; }
+  .cta-row .btn,
+  .btn-lg { width:100%; min-height:52px; padding:15px 20px; white-space:normal; text-align:center; }
+
+  /* header */
+  .header-inner { height:68px; padding-inline:18px; }
+  .brand-logo { height:30px; }
+  .nav-toggle { margin-right:-8px; }
+  .mobile-menu.open { padding:10px 18px 22px; }
+  .mobile-menu a { padding:12px 0; }
+
+  /* hero — mantém o símbolo original */
+  .hero { padding:96px 0 48px; }
+  .hero-inner { gap:12px; }
+  .hero-title { font-size:clamp(2.35rem,12vw,2.85rem); line-height:.95; }
+  .hero-lead { margin-top:20px; font-size:.94rem; line-height:1.62; }
+  .hero-actions { gap:10px; margin-top:24px; }
+  .hero-actions .btn { min-height:50px; padding:14px 18px; }
+  .hero-notes {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    width:100%;
+    margin-top:24px;
+  }
+  .hero-notes span,
+  .hero-notes span:first-child {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:46px;
+    padding:8px 6px;
+    border-right:1px solid rgba(221,251,255,.12);
+    border-bottom:0;
+    font-size:.56rem;
+    line-height:1.35;
+    letter-spacing:.08em;
+  }
+  .hero-notes span:last-child { border-right:0; }
+
+  /* programa */
+  .programa-layout { gap:28px; }
+  .programa .display-sub { font-size:2.25rem; line-height:1; }
+  .programa .section-intro { margin-top:18px; font-size:.9rem; line-height:1.65; }
+  .programa .pillar,
+  .programa .pillar:nth-child(2),
+  .programa .pillar:last-child {
+    grid-template-columns:36px minmax(0,1fr);
+    gap:4px 12px;
+    padding:19px 18px;
+  }
+  .programa .pillar-num { font-size:1.15rem; }
+  .programa .pillar h3 { font-size:1rem; }
+  .programa .pillar p { font-size:.82rem; line-height:1.58; }
+
+  /* benefícios em linhas compactas */
+  .benefit-grid { gap:12px; }
+  .benefit-card {
+    display:grid;
+    grid-template-columns:44px minmax(0,1fr);
+    gap:5px 15px;
+    min-height:0;
+    padding:20px 18px;
+    border-radius:16px;
+  }
+  .benefit-ico {
+    grid-row:1/3;
+    width:44px; height:44px;
+    margin:0;
+    border-radius:12px;
+  }
+  .benefit-ico svg { width:23px; height:23px; }
+  .benefit-card h3 { margin:0; font-size:.98rem; line-height:1.35; }
+  .benefit-card p { margin:0; font-size:.82rem; line-height:1.55; }
+  .beneficios .cta-row { margin-top:28px; }
+
+  /* comunidade */
+  .community { padding:14px 0 50px; }
+  .community-panel,
+  .community-copy { min-height:380px; }
+  .community-images,
+  .community-images img { min-height:380px; }
+  .community-copy { padding:22px 20px; }
+  .community-copy h2 { font-size:1.75rem; }
+  .community-copy p { margin-top:12px; font-size:.84rem; line-height:1.6; }
+
+  /* destinos */
+  .destinos .section-head { margin-bottom:26px; }
+  .destino-card { min-height:132px; }
+  .destino-photo { height:132px; }
+  .destino-info { padding:16px; }
+
+  /* abertura Cannes */
+  .cannes-reference-card {
+    min-height:410px;
+    margin-bottom:34px;
+    border-radius:0;
+  }
+  .cannes-reference-card .cannes-head { padding:24px 16px 0; }
+  .next-destination { font-size:1.35rem; }
+  .previous-destination { font-size:3rem; }
+  .cannes-reference-card .cannes-switch .script { font-size:3.9rem; }
+  .cannes-reference-card .cannes-meta {
+    flex-direction:row;
+    gap:8px 12px;
+    margin-top:18px;
+  }
+  .cannes-reference-card .cannes-meta .vagas {
+    align-self:auto;
+    padding:7px 14px;
+    font-size:.72rem;
+  }
+  .cannes-reference-card .cannes-meta .dates { font-size:.95rem; }
+  .cannes-watermark { display:none; }
+  .cannes-body { gap:30px; }
+  .amwc-box { margin-bottom:18px; }
+  .cannes-text h3 { font-size:1.65rem; line-height:1.18; }
+  .cannes-text p { font-size:.87rem; line-height:1.62; }
+  .cannes-facts { gap:0; margin-top:20px; }
+  .cannes-facts div { padding:12px 8px; }
+  .cannes-facts strong { font-size:1.3rem; }
+  .cannes-facts span { font-size:.56rem; letter-spacing:.1em; }
+  .cannes-benefits { padding:0; }
+  .cb-list li { min-height:0; padding-block:10px; font-size:.8rem; }
+
+  /* ticket */
+  .package { margin-top:38px; }
+  .package-ticket {
+    --ticket-notch:16px;
+    padding:28px 24px;
+  }
+  .package-ticket .package-head { margin-bottom:22px; }
+  .package-ticket .package-head h3 { font-size:2.2rem; }
+  .package-callout { margin-top:10px; font-size:.86rem; line-height:1.55; }
+  .package-ticket .package-route {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+    padding:18px 0;
+  }
+  .package-ticket .route-flight { display:none; }
+  .package-ticket .route-stop,
+  .package-ticket .route-date { min-width:0; }
+  .package-ticket .route-stop span,
+  .package-ticket .route-date span { font-size:.54rem; letter-spacing:.11em; }
+  .package-ticket .route-stop strong { font-size:.78rem; }
+  .package-ticket .route-date {
+    grid-column:1/-1;
+    padding:14px 0 0;
+  }
+  .package-ticket .route-date strong { font-size:.8rem; }
+  .package-offers { margin-top:34px; }
+  .offers-head { margin-bottom:30px; }
+  .offers-head h4 { font-size:1.55rem; }
+  .package-offers .package-prices { gap:20px; }
+  .package-offers .price-card,
+  .package-offers .price-card:first-child { padding:30px 22px 22px; }
+  .package-offers .price { font-size:2rem; white-space:normal; }
+  .package-offers .price-card p { margin-bottom:22px; }
+  .price-badge { padding:7px 16px; font-size:.6rem; }
+  .package-conditions { margin-top:32px; padding-top:24px; }
+  .package-offers .package-notes li { font-size:.8rem; line-height:1.55; }
+
+  /* formulário */
+  .form-wrap { gap:30px; }
+  .form-copy p { font-size:.9rem; line-height:1.65; }
+  .form-perks { margin-top:18px; }
+  .form-perks li { padding-block:8px; font-size:.84rem; }
+  .lead-form { padding:22px 18px; border-radius:16px; }
+  .field-row { gap:0; }
+  .field { margin-bottom:13px; }
+  .field label { font-size:.76rem; }
+  .field input,
+  .field select,
+  .field textarea { min-height:48px; font-size:16px; }
+  .field textarea { min-height:88px; }
+  .consent { margin-bottom:18px; font-size:.78rem; line-height:1.5; }
+  .lead-form .btn { min-height:52px; padding-inline:16px; white-space:normal; }
+
+  /* footer */
+  .site-footer { padding-top:44px; }
+  .footer-inner { gap:28px; padding-bottom:32px; }
+  .footer-brand { gap:10px; }
+  .footer-logo { height:28px; }
+  .footer-brand-divider { height:22px; }
+  .footer-ilikia-logo { width:62px; }
+  .footer-brand p { font-size:.82rem; }
+  .footer-links { display:grid; grid-template-columns:1fr 1fr; gap:10px 22px; width:100%; }
+  .footer-links a { font-size:.82rem; }
+  .footer-bottom { padding:18px 0; }
+  .footer-bottom span { font-size:.72rem; }
+}
+
+/* Hero mobile — fluxo sem sobreposição */
+@media (max-width:600px) {
+  .header-inner { gap:10px; }
+  .brand { gap:8px; min-width:0; }
+  .brand-logo { width:auto; height:26px; }
+  .brand-divider { display:block; width:1px; height:20px; }
+  .ilikia-logo { display:block; width:48px; height:auto; }
+  .nav-toggle { flex:0 0 auto; margin-left:auto; }
+
+  .hero { min-height:auto; padding:92px 0 46px; }
+  .hero-inner {
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    align-items:center;
+  }
+  .hero-copy { display:contents; }
+  .hero .eyebrow {
+    order:1;
+    max-width:100%;
+    margin:0 0 18px;
+    text-align:center;
+    font-size:.62rem;
+    line-height:1.5;
+  }
+  .hero-title {
+    position:relative;
+    z-index:2;
+    order:2;
+    width:100%;
+    margin:0;
+    font-size:clamp(2.25rem,11.5vw,2.75rem);
+    line-height:.96;
+    text-align:center;
+  }
+  .hero-trophy {
+    position:relative;
+    z-index:1;
+    order:3;
+    grid-row:auto;
+    display:grid;
+    place-items:center;
+    width:min(360px,100%);
+    min-height:220px;
+    margin:4px auto 0;
+    opacity:1;
+    animation:none;
+    filter:drop-shadow(0 22px 42px rgba(0,0,0,.42)) drop-shadow(0 0 24px rgba(127,216,230,.24));
+    transform:none;
+  }
+  .hero-trophy img {
+    width:100%;
+    height:auto;
+    transform:scale(1.15);
+    transform-origin:center;
+  }
+  .hero-lead {
+    position:relative;
+    z-index:2;
+    order:4;
+    width:100%;
+    max-width:350px;
+    margin:2px auto 0;
+    padding:0;
+    border:0;
+    text-align:center;
+  }
+  .hero-actions {
+    order:5;
+    width:100%;
+    max-width:350px;
+    margin:24px auto 0;
+  }
+  .hero-notes {
+    order:6;
+    max-width:350px;
+    margin:24px auto 0;
+  }
+  .hero-word { display:none; }
+}
+
+/* Lista Cannes mobile — conteúdo contido no box */
+@media (max-width:600px) {
+  .cannes-benefits {
+    width:100%;
+    max-width:100%;
+    padding:22px 18px 12px;
+    overflow:hidden;
+    border:1px solid rgba(127,216,230,.17);
+    border-radius:18px;
+  }
+  .cannes-benefits h4 {
+    margin:0 0 8px;
+    padding:0 0 14px;
+    font-size:.78rem;
+    line-height:1.4;
+    letter-spacing:.14em;
+  }
+  .cannes-benefits .cb-list {
+    display:block;
+    width:100%;
+    min-width:0;
+  }
+  .cannes-benefits .cb-list li {
+    display:block;
+    width:100%;
+    min-width:0;
+    min-height:0;
+    padding:11px 6px 11px 30px;
+    overflow-wrap:anywhere;
+    word-break:normal;
+    white-space:normal;
+    font-size:.8rem;
+    line-height:1.5;
+  }
+  .cannes-benefits .cb-list li::before { top:11px; }
+}
+
+/* O Programa — grafismo de fundo com transição suave */
+.programa::after {
+  right:-250px;
+  bottom:-70px;
+  opacity:.7;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 48%,rgba(0,0,0,.58) 70%,transparent 94%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 48%,rgba(0,0,0,.58) 70%,transparent 94%);
+}
+@media (max-width:600px) {
+  .programa::after {
+    width:430px;
+    height:430px;
+    right:-230px;
+    bottom:-44px;
+    opacity:.48;
+  }
+}
+
+/* Benefícios — ícones lineares e sem moldura */
+.benefit-ico {
+  width:40px;
+  height:40px;
+  margin-bottom:20px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+.benefit-ico svg {
+  width:30px;
+  height:30px;
+  fill:none;
+  stroke:var(--cyan);
+  stroke-width:1.5;
+}
+.benefit-ico circle[fill],
+.benefit-card svg circle {
+  fill:none;
+  stroke:var(--cyan);
+  stroke-width:1.5;
+}
+@media (max-width:600px) {
+  .benefit-ico {
+    width:40px;
+    height:40px;
+    margin:0;
+  }
+  .benefit-ico svg { width:26px; height:26px; }
+}
+
+/* Comunidade — texto à esquerda e pessoas fora da área de leitura */
+.community-copy {
+  align-items:flex-start;
+  text-align:left;
+}
+.community-copy h2,
+.community-copy p {
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+.community-images img,
+.community-images img:first-child,
+.community-images img:last-child {
+  object-position:center center;
+}
+.community-images::after {
+  background:linear-gradient(90deg,rgba(5,25,29,.96) 0%,rgba(5,25,29,.82) 27%,rgba(5,25,29,.3) 45%,transparent 63%);
+}
+@media (max-width:600px) {
+  .community-copy { align-items:flex-start; text-align:left; }
+  .community-images img,
+  .community-images img:first-child { object-position:70% center; }
+  .community-images::after {
+    background:linear-gradient(180deg,rgba(5,25,29,.08) 0%,rgba(5,25,29,.55) 48%,rgba(5,25,29,.98) 78%);
+  }
+}
+
+/* Cannes — indicadores com acabamento completo */
+.cannes-facts {
+  gap:14px;
+  margin-top:28px;
+  padding:0;
+  border-top:0;
+}
+.cannes-facts div,
+.cannes-facts div:first-child,
+.cannes-facts div:last-child {
+  position:relative;
+  overflow:hidden;
+  padding:24px 22px 22px;
+  border:1px solid rgba(127,216,230,.2);
+  border-radius:18px;
+  background:
+    radial-gradient(80% 110% at 100% 0%,rgba(127,216,230,.13),transparent 62%),
+    linear-gradient(145deg,rgba(127,216,230,.07),rgba(255,255,255,.018));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.045),0 20px 42px -38px rgba(0,0,0,.9);
+}
+.cannes-facts div::before {
+  content:'';
+  position:absolute;
+  top:-1px; left:22px;
+  width:48px; height:2px;
+  background:linear-gradient(90deg,var(--cyan),transparent);
+}
+.cannes-facts strong,
+.cannes-facts span { position:relative; z-index:1; }
+
+@media (max-width:600px) {
+  .cannes-facts { gap:8px; margin-top:20px; }
+  .cannes-facts div,
+  .cannes-facts div:first-child,
+  .cannes-facts div:last-child {
+    padding:16px 12px 14px;
+    border:1px solid rgba(127,216,230,.2);
+    border-radius:14px;
+  }
+  .cannes-facts div::before { left:12px; width:30px; }
+}
+
+/* Ticket — ícones sem fundo sobre a rota */
+.package-ticket .route-flight {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  height:auto;
+  background:none;
+}
+.package-ticket .route-flight::before,
+.package-ticket .route-flight::after {
+  content:'';
+  flex:1;
+  height:1px;
+  background:rgba(15,77,84,.34);
+}
+.package-ticket .route-flight span {
+  position:static;
+  flex:0 0 auto;
+  padding:0;
+  color:#167a84;
+  background:transparent;
+  line-height:1;
+  transform:none;
+}
+@media (max-width:600px) {
+  .package-ticket .route-flight { display:none; }
+}
+
+/* =========================================================
+   MICROINTERAÇÕES — desktop / dispositivos com hover
+   ========================================================= */
+.btn-cyan {
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.btn-cyan::after {
+  content:'';
+  position:absolute;
+  z-index:1;
+  top:-60%; bottom:-60%;
+  left:-38%;
+  width:24%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.52),transparent);
+  transform:skewX(-18deg) translateX(-240%);
+  transition:transform .7s var(--ease);
+  pointer-events:none;
+}
+
+.benefit-card,
+.benefit-ico,
+.cannes-facts div,
+.package-offers .price-card,
+.community-images img,
+.cannes-reference-card .cannes-photo img,
+.package-ticket {
+  transition:transform .5s var(--ease),border-color .4s var(--ease),background .4s var(--ease),box-shadow .5s var(--ease),filter .5s var(--ease);
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .btn-cyan:hover::after { transform:skewX(-18deg) translateX(720%); }
+  .marquee:hover .marquee-track { animation-play-state:paused; }
+
+  .benefit-card:hover { transform:translateY(-5px); }
+  .benefit-card:hover .benefit-ico { transform:translateY(-3px) scale(1.06); }
+
+  .programa .pillar:hover,
+  .programa .pillar:nth-child(2):hover {
+    transform:translateX(6px);
+    box-shadow:0 24px 50px -42px rgba(127,216,230,.75),inset 0 1px 0 rgba(255,255,255,.05);
+  }
+
+  .community-panel:hover .community-images img { transform:scale(1.025); }
+  .cannes-reference-card:hover .cannes-photo img { transform:scale(1.018); }
+
+  .cannes-facts div:hover {
+    transform:translateY(-4px);
+    border-color:rgba(127,216,230,.4);
+    box-shadow:0 26px 54px -40px rgba(127,216,230,.72),inset 0 1px 0 rgba(255,255,255,.06);
+  }
+
+  .package-ticket:hover {
+    transform:translateX(14px) translateY(-5px) rotate(-.65deg);
+    box-shadow:-18px 36px 62px -38px rgba(0,0,0,.94),22px 54px 96px -48px rgba(127,216,230,.9),inset 0 1px 0 rgba(255,255,255,.76);
+  }
+
+  .package-offers .price-card:hover {
+    transform:translateY(-5px);
+    border-color:rgba(127,216,230,.38);
+    box-shadow:0 28px 62px -46px rgba(127,216,230,.7),inset 0 1px 0 rgba(255,255,255,.055);
+  }
+  .package-offers .price-card.featured:hover { border-color:rgba(127,216,230,.92); }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *, *::before, *::after { transition-duration:.001ms !important; }
+  .btn-cyan::after { display:none; }
+  .marquee-track { animation:none !important; }
+}
+
+/* =========================================================
+   MOVIMENTO AMBIENTE — sutil e contínuo
+   ========================================================= */
+@keyframes iconBreath {
+  0%,100% { opacity:.76; filter:drop-shadow(0 0 0 rgba(127,216,230,0)); }
+  50% { opacity:1; filter:drop-shadow(0 0 7px rgba(127,216,230,.42)); }
+}
+@keyframes accentBreath {
+  0%,100% { opacity:.55; transform:scaleX(.72); transform-origin:left; }
+  50% { opacity:1; transform:scaleX(1); transform-origin:left; }
+}
+@keyframes routeBreath {
+  0%,100% { opacity:.72; transform:translateY(0); }
+  50% { opacity:1; transform:translateY(-2px); }
+}
+@keyframes badgeBreath {
+  0%,100% { box-shadow:0 0 0 0 rgba(127,216,230,0); }
+  50% { box-shadow:0 0 0 6px rgba(127,216,230,.1),0 0 18px rgba(127,216,230,.22); }
+}
+@keyframes ticketDrift {
+  0%,100% { transform:translateX(14px) translateY(0) rotate(-1.15deg); }
+  50% { transform:translateX(14px) translateY(-4px) rotate(-.9deg); }
+}
+
+.benefit-ico svg { animation:iconBreath 4.2s ease-in-out infinite; }
+.benefit-card:nth-child(2) .benefit-ico svg { animation-delay:.55s; }
+.benefit-card:nth-child(3) .benefit-ico svg { animation-delay:1.1s; }
+.benefit-card:nth-child(4) .benefit-ico svg { animation-delay:1.65s; }
+.benefit-card:nth-child(5) .benefit-ico svg { animation-delay:2.2s; }
+.benefit-card:nth-child(6) .benefit-ico svg { animation-delay:2.75s; }
+
+.cannes-facts div::before { animation:accentBreath 3.8s ease-in-out infinite; }
+.cannes-facts div:nth-child(2)::before { animation-delay:.7s; }
+.cannes-facts div:nth-child(3)::before { animation-delay:1.4s; }
+
+.package-ticket .route-flight span { animation:routeBreath 3s ease-in-out infinite; }
+.package-ticket .route-flight:nth-child(4) span { animation-delay:1.1s; }
+.price-badge { animation:badgeBreath 3.8s ease-in-out infinite; }
+
+@media (min-width:761px) {
+  .package-ticket { animation:ticketDrift 8s ease-in-out infinite; }
+  .package-ticket:hover { animation:none; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .benefit-ico svg,
+  .cannes-facts div::before,
+  .package-ticket .route-flight span,
+  .price-badge,
+  .package-ticket { animation:none !important; }
+}
+
+/* Comunidade — entrada orgânica da fotografia */
+@media (min-width:601px) {
+  .community-images img,
+  .community-images img:first-child,
+  .community-images img:last-child {
+    width:106%;
+    max-width:none;
+    object-position:left center;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 22%,rgba(0,0,0,.3) 33%,rgba(0,0,0,.78) 43%,#000 53%,#000 100%);
+    mask-image:linear-gradient(90deg,transparent 0%,transparent 22%,rgba(0,0,0,.3) 33%,rgba(0,0,0,.78) 43%,#000 53%,#000 100%);
+  }
+  .community-images::after {
+    background:
+      linear-gradient(90deg,#08262b 0%,rgba(8,38,43,.98) 27%,rgba(8,38,43,.82) 38%,rgba(8,38,43,.4) 49%,rgba(8,38,43,.08) 63%,transparent 74%),
+      linear-gradient(180deg,rgba(6,21,24,.06),transparent 72%);
+  }
+}
+@media (max-width:600px) {
+  .community-images img,
+  .community-images img:first-child,
+  .community-images img:last-child {
+    -webkit-mask-image:none;
+    mask-image:none;
+  }
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq {
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 14% 35%,rgba(84,188,204,.12),transparent 30%),
+    #08262b;
+}
+.faq::after {
+  content:'';
+  position:absolute;
+  width:430px;
+  height:430px;
+  right:-210px;
+  bottom:-250px;
+  border:1px solid rgba(127,216,230,.1);
+  border-radius:50%;
+  box-shadow:0 0 0 76px rgba(127,216,230,.025),0 0 0 152px rgba(127,216,230,.018);
+  pointer-events:none;
+}
+.faq-flight {
+  position:relative;
+  z-index:1;
+  width:min(100%,530px);
+  margin:38px auto 0;
+  isolation:isolate;
+}
+.faq-flight::before,
+.faq-flight::after {
+  content:'';
+  position:absolute;
+  z-index:-1;
+  right:1%;
+  top:38%;
+  width:43%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(127,216,230,.46) 42%,transparent);
+  transform:rotate(-7deg) scaleX(.7);
+  transform-origin:right center;
+  opacity:0;
+  animation:faqAirTrail 2.8s ease-in-out infinite;
+}
+.faq-flight::after {
+  top:51%;
+  right:-3%;
+  width:34%;
+  animation-delay:.65s;
+}
+.faq-plane {
+  position:relative;
+  z-index:1;
+  display:block;
+  width:100%;
+  max-width:none;
+  opacity:1;
+  filter:drop-shadow(0 30px 38px rgba(0,0,0,.3));
+  transform:translate3d(12px,-8px,0) rotate(3deg);
+  transform-origin:center;
+  pointer-events:none;
+  will-change:transform,filter;
+  animation:faqPlaneFlight 5.4s cubic-bezier(.45,.05,.28,1) infinite alternate;
+}
+@keyframes faqPlaneFlight {
+  0% {
+    transform:translate3d(18px,-13px,0) rotate(4deg) scale(.985);
+    filter:drop-shadow(0 34px 42px rgba(0,0,0,.25));
+  }
+  48% {
+    transform:translate3d(0,0,0) rotate(1deg) scale(1);
+    filter:drop-shadow(0 27px 34px rgba(0,0,0,.34));
+  }
+  100% {
+    transform:translate3d(-25px,15px,0) rotate(-3deg) scale(1.012);
+    filter:drop-shadow(0 20px 28px rgba(0,0,0,.4));
+  }
+}
+@keyframes faqAirTrail {
+  0%,100% { opacity:0; transform:rotate(-7deg) translateX(18px) scaleX(.65); }
+  45% { opacity:.46; }
+  70% { opacity:.12; transform:rotate(-7deg) translateX(0) scaleX(1); }
+}
+.faq-layout {
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:minmax(250px,.72fr) minmax(480px,1.28fr);
+  gap:clamp(46px,8vw,120px);
+  align-items:start;
+}
+.faq-head { position:sticky; top:130px; }
+.faq-head h2 { margin-top:18px; color:#fff; }
+.faq-head p {
+  max-width:390px;
+  margin-top:22px;
+  color:rgba(255,255,255,.62);
+  font-size:.94rem;
+  line-height:1.72;
+}
+.faq-list { border-top:1px solid rgba(127,216,230,.2); }
+.faq-item { border-bottom:1px solid rgba(127,216,230,.16); }
+.faq-item summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  min-height:88px;
+  padding:22px 4px;
+  color:#fff;
+  font-size:1rem;
+  font-weight:500;
+  line-height:1.4;
+  cursor:pointer;
+  list-style:none;
+  transition:color .3s ease,padding .3s ease;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary span {
+  position:relative;
+  flex:0 0 30px;
+  width:30px;
+  height:30px;
+  border:1px solid rgba(127,216,230,.34);
+  border-radius:50%;
+  transition:transform .35s var(--ease),background .3s ease,border-color .3s ease;
+}
+.faq-item summary span::before,
+.faq-item summary span::after {
+  content:'';
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:11px;
+  height:1px;
+  background:var(--cyan);
+  transform:translate(-50%,-50%);
+}
+.faq-item summary span::after { transform:translate(-50%,-50%) rotate(90deg); }
+.faq-item[open] summary { color:var(--cyan); padding-bottom:12px; }
+.faq-item[open] summary span {
+  transform:rotate(45deg);
+  background:rgba(127,216,230,.09);
+  border-color:rgba(127,216,230,.6);
+}
+.faq-answer {
+  opacity:0;
+  transform:translateY(-7px);
+  transition:opacity .32s ease,transform .42s var(--ease);
+}
+.faq-item[open] .faq-answer {
+  opacity:1;
+  transform:translateY(0);
+}
+.faq-item.is-closing .faq-answer {
+  opacity:0;
+  transform:translateY(-5px);
+}
+.faq-answer p {
+  max-width:650px;
+  padding:0 60px 24px 4px;
+  color:rgba(255,255,255,.63);
+  font-size:.9rem;
+  line-height:1.7;
+}
+.consent a {
+  color:var(--cyan);
+  text-decoration:underline;
+  text-decoration-color:rgba(127,216,230,.45);
+  text-underline-offset:3px;
+}
+.consent a:hover { text-decoration-color:var(--cyan); }
+
+/* =========================================================
+   POLÍTICA DE PRIVACIDADE
+   ========================================================= */
+.privacy-page { min-height:100vh; background:#08262b; color:#fff; }
+.privacy-header {
+  position:relative;
+  padding:32px 0;
+  border-bottom:1px solid rgba(127,216,230,.14);
+  background:rgba(6,30,34,.92);
+}
+.privacy-header .container { display:flex; align-items:center; justify-content:space-between; gap:30px; }
+.privacy-header .brand { position:static; transform:none; }
+.privacy-back { color:rgba(255,255,255,.7); font-size:.76rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.privacy-back:hover { color:var(--cyan); }
+.privacy-main { padding:clamp(70px,9vw,120px) 0; }
+.privacy-document { width:min(820px,100%); margin:0 auto; }
+.privacy-title { margin:18px 0 20px; color:#fff; font-size:clamp(2.35rem,6vw,4.6rem); font-weight:300; letter-spacing:-.045em; line-height:1.04; }
+.privacy-updated { color:rgba(255,255,255,.48); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+.privacy-lead { margin:40px 0 52px; color:rgba(255,255,255,.72); font-size:1.04rem; line-height:1.78; }
+.privacy-section { padding:34px 0; border-top:1px solid rgba(127,216,230,.14); }
+.privacy-section h2 { margin-bottom:15px; color:var(--cyan); font-size:1.12rem; font-weight:600; }
+.privacy-section p,
+.privacy-section li { color:rgba(255,255,255,.66); font-size:.92rem; line-height:1.75; }
+.privacy-section p + p { margin-top:12px; }
+.privacy-section ul { display:grid; gap:8px; margin-top:12px; padding-left:20px; }
+.privacy-footer { padding:28px 0; border-top:1px solid rgba(127,216,230,.14); color:rgba(255,255,255,.45); font-size:.76rem; }
+
+@media (hover:hover) and (pointer:fine) {
+  .faq-item summary:hover { padding-left:10px; color:var(--cyan); }
+}
+@media (max-width:820px) {
+  .faq-layout { grid-template-columns:1fr; gap:44px; }
+  .faq-head { position:static; }
+  .faq-flight { width:min(76vw,420px); margin:32px 0 0; }
+}
+@media (max-width:600px) {
+  .faq { padding-top:66px; padding-bottom:72px; }
+  .faq-flight { width:min(88vw,330px); margin:26px auto 0; }
+  .faq-layout { gap:34px; }
+  .faq-head p { margin-top:16px; }
+  .faq-item summary { min-height:74px; padding:18px 0; font-size:.9rem; }
+  .faq-answer p { padding:0 42px 20px 0; font-size:.83rem; }
+  .privacy-header { padding:22px 0; }
+  .privacy-header .ilikia-logo,
+  .privacy-header .brand-divider { display:none; }
+  .privacy-back { font-size:.66rem; }
+  .privacy-main { padding:64px 0 80px; }
+  .privacy-lead { margin:30px 0 42px; font-size:.94rem; }
+  .privacy-section { padding:28px 0; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .faq-plane,
+  .faq-flight::before,
+  .faq-flight::after { animation:none; }
+}
+
+/* CTA persistente — somente mobile */
+.mobile-sticky-cta { display:none; }
+@media (max-width:600px) {
+  .mobile-sticky-cta {
+    position:fixed;
+    z-index:90;
+    left:20px;
+    right:20px;
+    bottom:max(14px,env(safe-area-inset-bottom));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:56px;
+    padding:14px 22px;
+    border:1px solid rgba(255,255,255,.46);
+    border-radius:18px;
+    background:linear-gradient(135deg,#73d5e4,#8ee5ee);
+    box-shadow:0 18px 42px rgba(0,0,0,.34),0 0 30px rgba(127,216,230,.16);
+    color:#08262b;
+    font-size:.75rem;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-align:center;
+    text-transform:uppercase;
+    opacity:0;
+    pointer-events:none;
+    transform:translateY(calc(100% + 28px));
+    transition:opacity .32s ease,transform .46s var(--ease),box-shadow .3s ease;
+  }
+  .mobile-sticky-cta.is-visible {
+    opacity:1;
+    pointer-events:auto;
+    transform:translateY(0);
+  }
+  .mobile-sticky-cta:active {
+    transform:translateY(1px) scale(.99);
+    box-shadow:0 10px 28px rgba(0,0,0,.3);
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .mobile-sticky-cta { transition:none; }
 }
