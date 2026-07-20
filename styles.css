@@ -884,15 +884,21 @@ body::before {
   letter-spacing:-.03em;
 }
 .community-copy p { margin-top:18px; max-width:410px; color:rgba(255,255,255,.66); font-size:.92rem; line-height:1.72; }
-.community-images { display:grid; grid-template-columns:1.18fr .82fr; gap:8px; padding:8px; }
+.community-images { display:grid; grid-template-columns:1fr; gap:8px; padding:8px; }
 .community-images img {
   width:100%; height:100%; min-height:314px;
   object-fit:cover;
   border-radius:calc(var(--radius) - 8px);
   filter:saturate(.86) contrast(1.02);
 }
-.community-images img:first-child { object-position:68% center; }
+.community-images img:first-child { object-position:center 42%; }
 .community-images img:last-child { object-position:56% center; }
+
+.destino-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:820px;
+  margin-inline:auto;
+}
 
 @media (max-width:960px) {
   .hero-trophy { display:block; width:min(400px,66vw); margin:0 auto -28px; }
@@ -3020,4 +3026,148 @@ body::before {
 }
 @media (prefers-reduced-motion:reduce) {
   .mobile-sticky-cta { transition:none; }
+}
+
+/* Destinos — fotografia independente + passagem flutuante */
+.destinos .destino-card {
+  position:relative;
+  overflow:visible;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+}
+.destinos .destino-card:hover { border-color:transparent; box-shadow:none; }
+.destinos .destino-photo {
+  overflow:hidden;
+  border:1px solid rgba(127,216,230,.14);
+  border-radius:var(--radius);
+  box-shadow:0 30px 64px -42px rgba(0,0,0,.88);
+}
+.destinos .d-korea img { object-position:center 44%; }
+.destinos .d-dubai img { object-position:center 38%; }
+.destinos .destino-ticket {
+  position:relative;
+  display:block;
+  z-index:2;
+  width:calc(100% - 32px);
+  margin:-34px auto 0;
+  padding:20px 24px 24px;
+  overflow:hidden;
+  border:0;
+  border-radius:18px;
+  color:var(--deep-3);
+  background:
+    radial-gradient(100% 160% at 100% 0%,rgba(255,255,255,.96),transparent 58%),
+    linear-gradient(135deg,#e8fcff 0%,#b5edf3 52%,#82d6e1 100%);
+  box-shadow:0 24px 48px -26px rgba(0,0,0,.88);
+  transform-origin:center top;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease);
+}
+.destinos .destino-card:nth-child(1) .destino-ticket { transform:rotate(-1.7deg); }
+.destinos .destino-card:nth-child(2) .destino-ticket { transform:rotate(1.7deg); }
+.destinos .destino-card:nth-child(1):hover .destino-ticket { transform:rotate(-.7deg) translateY(-3px); }
+.destinos .destino-card:nth-child(2):hover .destino-ticket { transform:rotate(.7deg) translateY(-3px); }
+.destinos .destino-ticket::before,
+.destinos .destino-ticket::after {
+  content:'';
+  position:absolute;
+  top:67%;
+  width:24px;
+  height:46px;
+  border-radius:50%;
+  background:#081d20;
+  transform:translateY(-50%);
+}
+.destinos .destino-ticket::before { left:-14px; }
+.destinos .destino-ticket::after { right:-14px; }
+.destinos .destino-ticket-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:8px;
+}
+.destinos .destino-ticket .destino-ticket-label {
+  display:block;
+  margin:0;
+  color:#245d66;
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.destinos .destino-ticket-code {
+  flex-shrink:0;
+  color:#174c54;
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.14em;
+}
+.destinos .destino-ticket h3 {
+  margin:0;
+  color:#071c20;
+  font-size:1.7rem;
+  font-weight:600;
+  letter-spacing:-.025em;
+}
+.destinos .destino-route {
+  display:grid;
+  grid-template-columns:auto minmax(46px,1fr) auto;
+  align-items:center;
+  gap:9px;
+  margin-top:16px;
+  padding:15px 10px 0;
+  border-top:1px dashed rgba(6,21,24,.22);
+}
+.destinos .destino-route > div {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+.destinos .destino-route > div:last-child { text-align:right; }
+.destinos .destino-route span {
+  margin:0;
+  color:#245d66;
+  font-size:.54rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.destinos .destino-route strong {
+  overflow:hidden;
+  margin-top:2px;
+  color:#071c20;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-overflow:ellipsis;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.destinos .destino-route i {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:#245d66;
+  font-size:.64rem;
+  font-style:normal;
+}
+.destinos .destino-route i::before,
+.destinos .destino-route i::after {
+  content:'';
+  height:1px;
+  flex:1;
+  background:rgba(6,21,24,.24);
+}
+
+@media (max-width:600px) {
+  .destinos .destino-ticket {
+    width:calc(100% - 20px);
+    margin-top:-28px;
+    padding:18px 18px 20px;
+  }
+  .destinos .destino-card:nth-child(1) .destino-ticket { transform:rotate(-1deg); }
+  .destinos .destino-card:nth-child(2) .destino-ticket { transform:rotate(1deg); }
+  .destinos .destino-ticket h3 { font-size:1.45rem; }
+  .destinos .destino-route { padding-inline:6px; }
 }

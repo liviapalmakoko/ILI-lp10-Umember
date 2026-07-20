@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,400;1,500&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260713-28" />
+  <link rel="stylesheet" href="styles.css?v=20260720-06" />
 
   <!-- Tracking global ILIKIA - Pixel + GA4 + CAPI (server-side) via gateway -->
   <script>window.__TRK__={brand:'ilikia',pixelId:'666277432116339',ga4Id:'',collect:'https://track-ilikia.koko.ag/collect'};</script>
@@ -34,7 +34,7 @@
         <a href="#programa">O Programa</a>
         <a href="#beneficios">Benefícios</a>
         <a href="#destinos">Destinos</a>
-        <a href="#cannes">Próximo Destino</a>
+        <a href="#faq">Dúvidas</a>
       </nav>
       <a href="#formulario" class="btn btn-cyan btn-sm nav-cta">Quero fazer parte</a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
@@ -45,7 +45,7 @@
       <a href="#programa">O Programa</a>
       <a href="#beneficios">Benefícios</a>
       <a href="#destinos">Destinos</a>
-      <a href="#cannes">Próximo Destino</a>
+      <a href="#faq">Dúvidas</a>
       <a href="#formulario" class="btn btn-cyan">Quero fazer parte</a>
     </div>
   </header>
@@ -64,13 +64,7 @@
           <em>reconhecimento</em> e <em>oportunidades</em>.
         </p>
         <div class="hero-actions reveal">
-          <a href="#programa" class="btn btn-cyan">Conheça o programa</a>
-          <a href="#cannes" class="btn btn-ghost">Ver próximo destino</a>
-        </div>
-        <div class="hero-notes reveal" aria-label="Destaques do próximo destino">
-          <span>AMWC Cannes 2027</span>
-          <span>30 vagas</span>
-          <span>30/03 a 04/04</span>
+          <a href="#programa" class="btn btn-cyan">Conheça mais do programa</a>
         </div>
       </div>
       <figure class="hero-trophy reveal" aria-hidden="true">
@@ -209,8 +203,8 @@
           <h2>Uma comunidade que <span class="accent">vive junto.</span></h2>
           <p>Conexões, encontros e experiências internacionais ao lado de profissionais que compartilham o mesmo padrão de excelência.</p>
         </div>
-        <div class="community-images" aria-hidden="true">
-          <img src="imagens/generated/cannes-professional-community-v2.webp" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+        <div class="community-images">
+          <img src="imagens/experiencias/u-members-dubai.jpg" alt="Participantes do U Members durante uma experiência internacional em Dubai" width="2000" height="1333" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
@@ -227,129 +221,35 @@
 
       <div class="destino-grid">
         <article class="destino-card reveal">
-          <div class="destino-photo d-monaco"><img src="imagens/generated/monaco-card-v2.webp" alt="Vista premium de Mônaco" width="900" height="1125" loading="lazy" decoding="async" /></div>
-          <div class="destino-info"><h3>Mônaco</h3><span>Principado de Mônaco</span></div>
+          <div class="destino-photo d-korea"><img src="imagens/experiencias/destino-coreia.jpg" alt="Grupo do U Members durante uma experiência na Coreia do Sul" width="2000" height="1333" loading="lazy" decoding="async" /></div>
+          <div class="destino-info destino-ticket">
+            <div class="destino-ticket-head">
+              <span class="destino-ticket-label">Cartão de embarque</span>
+              <span class="destino-ticket-code">UM 01</span>
+            </div>
+            <h3>Coreia do Sul</h3>
+            <div class="destino-route" aria-label="Rota Brasil para Seul">
+              <div><span>Origem</span><strong>Brasil</strong></div>
+              <i aria-hidden="true">✦</i>
+              <div><span>Destino</span><strong>Seul</strong></div>
+            </div>
+          </div>
         </article>
         <article class="destino-card reveal">
-          <div class="destino-photo d-korea"><img src="imagens/generated/seoul-card-v2.webp" alt="Vista premium de Seul, Coreia do Sul" width="900" height="1125" loading="lazy" decoding="async" /></div>
-          <div class="destino-info"><h3>Seul</h3><span>Coreia do Sul</span></div>
+          <div class="destino-photo d-dubai"><img src="imagens/experiencias/destino-dubai.jpg" alt="Grupo do U Members durante uma experiência em Dubai" width="1333" height="2000" loading="lazy" decoding="async" /></div>
+          <div class="destino-info destino-ticket">
+            <div class="destino-ticket-head">
+              <span class="destino-ticket-label">Cartão de embarque</span>
+              <span class="destino-ticket-code">UM 02</span>
+            </div>
+            <h3>Dubai</h3>
+            <div class="destino-route" aria-label="Rota Brasil para Dubai">
+              <div><span>Origem</span><strong>Brasil</strong></div>
+              <i aria-hidden="true">✦</i>
+              <div><span>Destino</span><strong>Emirados Árabes</strong></div>
+            </div>
+          </div>
         </article>
-        <article class="destino-card reveal">
-          <div class="destino-photo d-dubai"><img src="imagens/generated/dubai-card-v2.webp" alt="Vista premium de Dubai" width="900" height="1125" loading="lazy" decoding="async" /></div>
-          <div class="destino-info"><h3>Dubai</h3><span>Emirados Árabes</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PRÓXIMO DESTINO: CANNES 2027 ===================== -->
-  <section class="section cannes" id="cannes">
-    <div class="container">
-      <div class="cannes-reference-card reveal">
-        <figure class="cannes-photo">
-          <img src="imagens/generated/cannes-hero-v2.webp" alt="La Croisette e a orla de Cannes, França" width="1672" height="941" loading="lazy" decoding="async" />
-        </figure>
-        <div class="cannes-head">
-          <span class="next-destination">Próximo destino:</span>
-          <p class="cannes-switch">
-            <span class="previous-destination">Mônaco</span>
-            <span class="script">Cannes</span>
-          </p>
-          <div class="cannes-meta">
-            <span class="vagas">Somente <strong>30 vagas</strong></span>
-            <span class="dates">30/03 a 04/04 · 2027</span>
-          </div>
-        </div>
-        <span class="cannes-watermark script" aria-hidden="true">Cannes</span>
-      </div>
-
-      <div class="cannes-body">
-        <div class="cannes-text reveal">
-          <div class="amwc-box"><span>AMWC Cannes</span><strong>1 a 3 de abril de 2027</strong></div>
-          <h3>Onde os principais movimentos da estética mundial acontecem.</h3>
-          <p>
-            Em 2027, o U Members reúne um grupo seleto de profissionais em Cannes durante o AMWC,
-            um dos encontros mais relevantes da estética mundial. Uma jornada planejada para aproximar
-            os participantes das tendências, referências e conexões mais estratégicas do mercado internacional.
-          </p>
-          <p>
-            A experiência contempla hospedagem de 30 de março a 4 de abril, logística de passagem para Nice,
-            eventos exclusivos da Ilikia e uma <strong>sessão fotográfica individual</strong> em Cannes,
-            com produção assinada pela marca.
-          </p>
-          <div class="cannes-facts" aria-label="Destaques da experiência">
-            <div><strong>30</strong><span>vagas</span></div>
-            <div><strong>6 dias</strong><span>em Cannes</span></div>
-            <div><strong>AMWC</strong><span>incluso</span></div>
-          </div>
-        </div>
-
-        <aside class="cannes-benefits reveal">
-          <h4>O que está incluso</h4>
-          <ol class="cb-list">
-            <li>Certificação de 02 módulos de Aptos</li>
-            <li>Participação VIP no Iris by Ilikia 2027</li>
-            <li>Acesso antecipado aos lançamentos da marca</li>
-            <li>Inscrições para congressos nacionais selecionados</li>
-            <li>Inscrição AMWC Cannes 2027</li>
-            <li>Logística de passagem para Nice</li>
-            <li>Hospedagem em Cannes (30/03 a 04/04)</li>
-            <li>Eventos exclusivos da Ilikia</li>
-            <li>Sessão de fotos com fotógrafo profissional</li>
-          </ol>
-        </aside>
-      </div>
-
-      <div class="package reveal">
-        <div class="package-ticket">
-          <div class="package-head">
-            <span class="kicker light">Pacote</span>
-            <h3>Cannes 2027</h3>
-            <p class="package-callout">Uma experiência internacional completa, criada para apenas <strong>30 profissionais.</strong></p>
-          </div>
-          <div class="package-route" aria-label="Rota e período da experiência">
-            <div class="route-stop"><span>Origem</span><strong>Brasil</strong></div>
-            <div class="route-flight" aria-hidden="true"><span>✈</span></div>
-            <div class="route-stop"><span>Conexão</span><strong>Nice</strong></div>
-            <div class="route-flight" aria-hidden="true"><span>✦</span></div>
-            <div class="route-stop"><span>Destino</span><strong>Cannes</strong></div>
-            <div class="route-date"><span>Período</span><strong>30 MAR — 4 ABR</strong></div>
-          </div>
-        </div>
-
-        <div class="package-offers">
-          <div class="offers-head">
-            <span class="kicker light">Modalidades</span>
-            <h4>Escolha como você quer embarcar.</h4>
-          </div>
-          <div class="package-prices">
-            <article class="price-card featured">
-              <span class="price-badge">Mais completo</span>
-              <span class="price-label">Com aéreo</span>
-              <strong class="price">R$ 450.000<small>,00</small></strong>
-              <p>Inclui a logística de passagem aérea para Nice.</p>
-              <a href="#formulario" class="btn btn-cyan btn-block">Quero esta modalidade</a>
-            </article>
-            <article class="price-card">
-              <span class="price-label">Sem aéreo</span>
-              <strong class="price">R$ 350.000<small>,00</small></strong>
-              <p>Para quem prefere organizar a própria passagem aérea.</p>
-              <a href="#formulario" class="btn btn-ghost btn-block">Quero esta modalidade</a>
-            </article>
-          </div>
-          <div class="package-conditions">
-            <h5>Condições do pacote</h5>
-            <ul class="package-notes">
-              <li>Adesão condicionada à disponibilidade</li>
-              <li>Adição de 1 acompanhante mediante acréscimo de R$ 80.000,00 (hospedagem compartilhada)</li>
-              <li>Limite de 01 acompanhante por pacote</li>
-              <li>Consulte os produtos vigentes do portfólio</li>
-              <li>Pagamento: 70% até fevereiro · 30% restantes faturados até março</li>
-              <li>Hospedagem de 30/03 a 04/04</li>
-              <li>Entrada no programa mediante aceite do Termo &amp; Compliance</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -359,8 +259,8 @@
     <div class="container faq-layout">
       <div class="faq-head reveal">
         <span class="kicker light">Perguntas frequentes</span>
-        <h2 class="display-sub">Antes de <span class="accent">embarcar.</span></h2>
-        <p>As principais informações para entender o programa e a experiência Cannes 2027.</p>
+        <h2 class="display-sub">Para conhecer melhor o <span class="accent">U Members.</span></h2>
+        <p>As principais informações sobre o programa, seus benefícios e as experiências compartilhadas.</p>
         <div class="faq-flight" aria-hidden="true">
           <img src="imagens/generated/plane-cutout-lp9.png" class="faq-plane" alt="" loading="lazy" decoding="async" />
         </div>
@@ -369,27 +269,23 @@
       <div class="faq-list reveal">
         <details class="faq-item">
           <summary>Para quem é o U Members?<span aria-hidden="true"></span></summary>
-          <div class="faq-answer"><p>Para profissionais da área da estética que buscam conhecimento internacional, conexões qualificadas, acesso antecipado e experiências exclusivas ao lado da Ilikia.</p></div>
+          <div class="faq-answer"><p>O U Members é voltado a profissionais da área da estética que buscam conhecimento internacional, conexões qualificadas, acesso antecipado e experiências exclusivas ao lado da Ilikia.</p></div>
         </details>
         <details class="faq-item">
-          <summary>Como a participação é confirmada?<span aria-hidden="true"></span></summary>
-          <div class="faq-answer"><p>O envio do formulário registra o interesse, mas não garante a vaga. A adesão está condicionada à disponibilidade e ao aceite do Termo &amp; Compliance do programa.</p></div>
+          <summary>Quais são os benefícios do programa?<span aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>Os membros têm acesso a experiências internacionais, pré-vendas de lançamentos, participações VIP em eventos da Ilikia, congressos e imersões nas principais tendências do mercado.</p></div>
         </details>
         <details class="faq-item">
-          <summary>O que está incluso na experiência Cannes 2027?<span aria-hidden="true"></span></summary>
-          <div class="faq-answer"><p>O pacote reúne hospedagem em Cannes, inscrição no AMWC, logística para Nice conforme a modalidade escolhida, eventos Ilikia, experiências exclusivas e os demais itens apresentados nesta página.</p></div>
+          <summary>Como faço para demonstrar interesse?<span aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>Preencha o formulário desta página. A equipe Ilikia entrará em contato para apresentar o programa e orientar sobre as próximas etapas.</p></div>
         </details>
         <details class="faq-item">
-          <summary>Qual é a diferença entre as modalidades com e sem aéreo?<span aria-hidden="true"></span></summary>
-          <div class="faq-answer"><p>A modalidade com aéreo inclui a logística da passagem para Nice. Na modalidade sem aéreo, o participante organiza a própria passagem, mantendo os demais itens previstos no pacote.</p></div>
+          <summary>O U Members realiza experiências internacionais?<span aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>Sim. O programa promove vivências que aproximam os participantes de diferentes culturas, referências profissionais e tendências internacionais.</p></div>
         </details>
         <details class="faq-item">
-          <summary>É possível levar acompanhante?<span aria-hidden="true"></span></summary>
-          <div class="faq-answer"><p>Sim. É permitido um acompanhante por pacote, mediante acréscimo de R$ 80.000,00 e hospedagem compartilhada, sujeito à disponibilidade.</p></div>
-        </details>
-        <details class="faq-item">
-          <summary>Como funcionam a reserva e o pagamento?<span aria-hidden="true"></span></summary>
-          <div class="faq-answer"><p>A adesão depende da disponibilidade. A condição apresentada prevê 70% do pagamento até fevereiro e os 30% restantes faturados até março.</p></div>
+          <summary>Como descubro os próximos destinos?<span aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>Os próximos destinos e novidades são comunicados diretamente aos interessados e membros do programa. Cadastre-se para receber as informações.</p></div>
         </details>
       </div>
     </div>
@@ -400,12 +296,12 @@
     <img src="assets/brand/tulip-mark.png" class="form-tulip" alt="" aria-hidden="true" />
     <div class="container form-wrap">
       <div class="form-copy reveal">
-        <span class="kicker light">Vagas limitadas</span>
-        <h2 class="display-sub">Solicite as condições para <span class="accent">Cannes 2027.</span></h2>
-        <p>Preencha seus dados para receber as informações completas do pacote e conversar com a equipe Ilikia.</p>
+        <span class="kicker light">Experiências exclusivas</span>
+        <h2 class="display-sub">Quer saber o nosso <span class="accent">próximo destino?</span></h2>
+        <p>Preencha seus dados para receber informações sobre nossas experiências e as condições exclusivas do programa U Members.</p>
         <ul class="form-perks">
-          <li>Grupo seleto e curadoria personalizada</li>
-          <li>Informações completas sobre condições e valores</li>
+          <li>Experiências internacionais com curadoria</li>
+          <li>Conexões com profissionais de alto nível</li>
           <li>Atendimento dedicado da equipe Ilikia</li>
         </ul>
       </div>
@@ -451,7 +347,7 @@
           <input type="checkbox" id="consent" name="consent" required />
           <span>Autorizo o contato da Ilikia e aceito receber informações sobre o programa U Members, conforme a <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
         </label>
-        <button type="submit" class="btn btn-cyan btn-lg btn-block">Solicitar condições do pacote</button>
+        <button type="submit" class="btn btn-cyan btn-lg btn-block">Quero receber as informações</button>
         <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -464,13 +360,12 @@
         <img src="assets/brand/members-logo-white.png" alt="U Members by Ilikia" class="footer-logo" />
         <span class="footer-brand-divider" aria-hidden="true"></span>
         <img src="assets/brand/ilikia-logo.png" alt="Ilikia" class="footer-ilikia-logo" />
-        <p>Um programa Ilikia · presente no AMWC Cannes 2027.</p>
+        <p>Um programa Ilikia de conhecimento, conexões e experiências internacionais.</p>
       </div>
       <div class="footer-links">
         <a href="#programa">O Programa</a>
         <a href="#beneficios">Benefícios</a>
         <a href="#destinos">Destinos</a>
-        <a href="#cannes">Próximo Destino</a>
         <a href="#faq">Perguntas frequentes</a>
         <a href="#formulario">Quero participar</a>
         <a href="politica-de-privacidade.html">Privacidade</a>
@@ -484,9 +379,9 @@
     </div>
   </footer>
 
-  <a href="#formulario" class="mobile-sticky-cta" id="mobileStickyCta">Solicitar condições</a>
+  <a href="#formulario" class="mobile-sticky-cta" id="mobileStickyCta">Quero saber mais</a>
 
-  <script src="script.js?v=20260713-04"></script>
+  <script src="script.js?v=20260720-02"></script>
 
   <!-- ===== Aviso de cookies (modelo opt-out): tracking carrega por padrao; so para se "Recusar" ===== -->
   <style>
@@ -525,8 +420,8 @@
       function show(){ if(banner){ banner.hidden=false; requestAnimationFrame(function(){ banner.classList.add('show'); }); } }
       function hide(){ if(banner){ banner.classList.remove('show'); setTimeout(function(){ banner.hidden=true; },350); } }
       var c=get();
-      if(c!=='denied'){ loadTracking(); }   // opt-out: rastreia por padrao
-      if(!c){ show(); }                      // aviso so ate a 1a escolha
+      if(c!=='denied'){ loadTracking(); }
+      if(!c){ show(); }
       var a=document.getElementById('cookieAccept'); if(a) a.addEventListener('click',function(){ set('granted'); hide(); loadTracking(); });
       var r=document.getElementById('cookieReject'); if(r) r.addEventListener('click',function(){ set('denied'); hide(); location.reload(); });
       document.querySelectorAll('[data-cookie-prefs]').forEach(function(el){ el.addEventListener('click',function(e){ e.preventDefault(); show(); }); });
